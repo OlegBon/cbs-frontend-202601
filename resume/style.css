@@ -19,6 +19,7 @@ body {
   line-height: 1.5rem;
   font-weight: 400;
   color: #21243d;
+  text-align: left;
 }
 
 header {
@@ -107,7 +108,7 @@ header {
   }
 
   .hero__content {
-    padding-bottom: 1.25rem;
+    padding-bottom: 1.5rem;
   }
 
   .home-page {
@@ -198,3 +199,89 @@ header {
   }
 }
 /* END HOME PAGE */
+
+/* BLOG PAGE */
+.hero-left {
+  flex-direction: row;
+  text-align: left;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .posts-list {
+    gap: 1.5rem;
+  }
+}
+
+.blog-article__title {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.75rem;
+}
+
+@media (max-width: 768px) {
+  .blog-article__title {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+}
+
+.blog-article__info {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .blog-article__info {
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.blog-article__date,
+.blog-article__tech {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .blog-article__date,
+  .blog-article__tech {
+    font-size: 1rem;
+  }
+}
+
+.blog-article__tech {
+  color: #8695a4;
+}
+
+.blog-article__vertical-divider {
+  border-left: 0.0625rem solid #000;
+  height: 1.25rem;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .blog-article__vertical-divider {
+    height: 1rem;
+  }
+}
+
+.blog-article__divider {
+  height: 0.0625rem;
+  background-color: #c4c4c4;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .blog-article__divider {
+    margin-top: 1.5rem;
+  }
+}
+/* END BLOG PAGE */
