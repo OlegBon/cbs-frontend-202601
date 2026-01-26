@@ -3,19 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Home</title>
   </head>
   <body>
-    <h1>Home</h1>
-    <h2>About</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-      sapiente cumque nesciunt, obcaecati asperiores eum consequuntur fuga,
-      magnam similique ut aliquid libero amet aut, alias voluptate. Ut pariatur
-      optio vitae!
-    </p>
+    <header>
+      <nav class="menu">
+        <a href="#">Works</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <section class="hero">
+          <div class="hero__divider"></div>
+          <div class="hero__content">
+            <div class="hero__info">
+              <h1 class="hero__title">
+                Hi, I am Oleh Bondarenko, Full Stack Developer
+              </h1>
+              <p class="hero__description">
+                Experienced in building web applications with a focus on
+                performance and user experience. Skilled in JavaScript, Python,
+                and cloud technologies.
+              </p>
+              <a href="#" class="hero__button">Download Resume</a>
+            </div>
 
-    <div><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="hero__avatar-box">
+              <img
+                src="./img/ava.jpg"
+                alt="Oleh Bondarenko"
+                class="hero__avatar"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
