@@ -36,11 +36,13 @@ header {
   width: 100%;
   max-width: 54rem;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 @media (max-width: 768px) {
   .container {
     max-width: 22rem;
+    padding: 0 0.5rem;
   }
 }
 /* END COMMON STYLES */
@@ -52,21 +54,85 @@ header {
   align-items: center;
   height: 100%;
   max-width: 72rem;
-  gap: 2rem;
   margin: 0 auto;
   padding-right: 3.75rem;
+  position: relative;
+}
+
+.menu__list {
+  display: flex;
+  gap: 2rem;
 }
 
 .menu a {
   text-decoration: none;
-  color: #000;
+  color: #21243d;
   font-weight: 500;
   font-size: 1.25rem;
+  transition: color 0.3s;
 }
+
 .menu a:hover,
 .menu a:active,
 .menu .active {
   color: #ff6464;
+}
+
+.burger {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/burger-menu.svg");
+  transition: all 0.3s ease;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.burger.active {
+  background-image: url("../img/close.svg");
+  /* transform: rotate(90deg); */
+}
+
+@media (max-width: 768px) {
+  .menu {
+    max-width: 22rem;
+    padding-right: 0.5rem;
+  }
+
+  .burger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu__list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    padding: 1.5rem;
+    box-shadow: 0 0.375rem 0.625rem rgba(0, 0, 0, 0.1);
+    text-align: right;
+    z-index: 10;
+    border-radius: 0 0 0.375rem 0.375rem;
+  }
+
+  .menu__list.open {
+    display: flex;
+  }
+
+  .menu a {
+    display: block;
+    padding: 0.75rem 0;
+    /* font-size: 1.5rem; */
+  }
 }
 /* END HEADER */
 
@@ -137,7 +203,7 @@ header {
   line-height: 3.75rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hero__title {
     font-size: 2rem;
     line-height: 2.5rem;
@@ -150,7 +216,7 @@ header {
   margin-bottom: 2.5rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hero__info .hero__description {
     margin-top: 1.25rem;
     margin-bottom: 1.75rem;
@@ -194,7 +260,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .hero__info {
@@ -204,6 +270,7 @@ header {
   .hero__avatar-box {
     max-width: 12rem;
     max-height: 12rem;
+    box-shadow: -0.25rem 0.5rem 0 0 #edf7fa;
     order: 1;
   }
 }
