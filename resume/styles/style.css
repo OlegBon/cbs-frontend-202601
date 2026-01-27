@@ -22,12 +22,12 @@ body {
   text-align: left;
 }
 
-header {
+.main-header {
   height: 6.25rem;
 }
 
 @media (max-width: 768px) {
-  header {
+  .main-header {
     height: 3.2rem;
   }
 }
@@ -56,7 +56,23 @@ main {
   }
 }
 
-h2 {
+h1,
+.h1-style {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+}
+
+@media (max-width: 768px) {
+  h1,
+  .h1-style {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+h2,
+.h2-style {
   font-size: 1.375rem;
   font-weight: 400;
   line-height: 3.75rem;
@@ -64,7 +80,8 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  h2 {
+  h2,
+  .h2-style {
     font-size: 1.125rem;
     text-align: center;
   }
@@ -242,20 +259,12 @@ p {
   order: 1;
 }
 
-.hero__title {
-  font-size: 2.75rem;
-  font-weight: 700;
-  line-height: 3.75rem;
-}
-
 .hero__title-home {
   margin-top: 0;
 }
 
 @media (max-width: 768px) {
   .hero__title {
-    font-size: 2rem;
-    line-height: 2.5rem;
     margin-top: 1rem;
   }
 
@@ -420,10 +429,16 @@ p {
 .work__badge {
   background-color: #142850;
   color: white;
-  padding: 0 0.625rem;
+  padding: 0.125rem 0.625rem 0;
   font-size: 1.125rem;
   border-radius: 1rem;
   margin-right: 1rem;
+  max-height: 100%;
+  height: 100%;
+}
+
+.badge-red {
+  background-color: #ff6464;
 }
 
 @media (max-width: 768px) {
@@ -431,6 +446,7 @@ p {
     font-size: 1rem;
     margin-right: 0.75rem;
     font-weight: 500;
+    padding: 0 0.625rem;
   }
 }
 
@@ -546,4 +562,67 @@ p {
 .work__tech {
   color: #8695a4;
 }
+
+.color-txt {
+  color: #21243d;
+}
 /* END BLOG PAGE */
+
+/* WORK DETAIL PAGE */
+.work-detail .work-title {
+  max-width: 35rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .work-detail .work-title {
+    max-width: 100%;
+  }
+}
+
+.work-detail .work-header {
+  margin-bottom: 1.5rem;
+}
+
+.work-detail .work-meta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.work-detail .work-content p {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .work-detail .work-content p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.work-detail .work-image {
+  width: 100%;
+  height: auto;
+}
+
+.work-detail .typography-example {
+  margin-top: 3.375rem;
+  margin-bottom: 1.875rem;
+}
+
+@media (max-width: 768px) {
+  .work-detail .typography-example {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.work-detail .typography-example .h1-style,
+.work-detail .typography-example .h2-style {
+  text-align: left;
+}
+
+.mt-1rem {
+  margin-top: 1rem;
+}
+/* END WORK DETAIL PAGE */
