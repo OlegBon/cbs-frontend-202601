@@ -431,6 +431,7 @@ p {
   color: white;
   padding: 0.125rem 0.625rem 0;
   font-size: 1.125rem;
+  font-weight: 700;
   border-radius: 1rem;
   margin-right: 1rem;
   max-height: 100%;
@@ -446,7 +447,7 @@ p {
     font-size: 1rem;
     margin-right: 0.75rem;
     font-weight: 500;
-    padding: 0 0.625rem;
+    padding: 0.0625rem 0.625rem 0;
   }
 }
 
@@ -569,14 +570,28 @@ p {
 /* END BLOG PAGE */
 
 /* WORK DETAIL PAGE */
+.work-page .container {
+  max-width: 42.5rem;
+}
+
+@media (max-width: 768px) {
+  .work-page .container {
+    max-width: 21.25rem;
+  }
+}
+
 .work-detail .work-title {
-  max-width: 35rem;
+  max-width: 30rem;
   width: 100%;
+  font-size: 2.125rem;
+  line-height: 3.125rem;
 }
 
 @media (max-width: 768px) {
   .work-detail .work-title {
     max-width: 100%;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
   }
 }
 
