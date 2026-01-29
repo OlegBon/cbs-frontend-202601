@@ -38,7 +38,7 @@
 ```text
 /resume
   ├── img/                         # Зображення та іконки
-  │   ├── footer
+  │   ├── socials-icons
   │   └── works
   ├── scripts/                     # JavaScript файли
   │   └── main.js                  # Логіка мобільного меню
