@@ -36,22 +36,21 @@
 ## 📂 Структура проєкту
 
 ```text
-/resume
-  ├── img/                         # Зображення та іконки
-  │   ├── socials-icons
-  │   └── works
-  ├── scripts/                     # JavaScript файли
-  │   └── main.js                  # Логіка мобільного меню
-  ├── styles/                      # CSS стилі
-  │   └── style.css                # Глобальні стилі та змінні
-  ├── works/                       # Детальні сторінки кейсів (робіт)
-  │   ├── 36-days-of-malayalam-type.html
-  │   ├── designing-dashboards.html
-  │   └── vibrant-portraits-of-2020.html
-  ├── blog.html                    # Головна сторінка блогу (список)
-  ├── index.html                   # Головна сторінка портфоліо
-  ├── works.html                   # Сторінка зі списком робіт
-  └── README.md                    # Документація проєкту
+├── img/                         # Зображення та іконки
+│   ├── socials-icons
+│   └── works
+├── scripts/                     # JavaScript файли
+│   └── main.js                  # Логіка мобільного меню
+├── styles/                      # CSS стилі
+│   └── style.css                # Глобальні стилі та змінні
+├── works/                       # Детальні сторінки кейсів (робіт)
+│   ├── 36-days-of-malayalam-type.html
+│   ├── designing-dashboards.html
+│   └── vibrant-portraits-of-2020.html
+├── blog.html                    # Головна сторінка блогу (список)
+├── index.html                   # Головна сторінка портфоліо
+├── works.html                   # Сторінка зі списком робіт
+└── README.md                    # Документація проєкту
 ```
 
 ## 🙏 Подяка
