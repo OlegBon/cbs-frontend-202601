@@ -38,6 +38,8 @@
 ```text
 /resume
   ├── img/                         # Зображення та іконки
+  │   ├── footer
+  │   └── works
   ├── scripts/                     # JavaScript файли
   │   └── main.js                  # Логіка мобільного меню
   ├── styles/                      # CSS стилі
