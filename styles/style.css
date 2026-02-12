@@ -854,7 +854,7 @@ p {
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #e0e0e0; /* Світло-сірий бордер */
+  border: 1px solid #e0e0e0;
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
@@ -864,11 +864,11 @@ p {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #ff6464; /* Акцентний колір при фокусі */
+  border-color: #ff6464;
 }
 
 .form-group textarea {
-  resize: vertical; /* Дозволяємо розтягувати тільки по висоті */
+  resize: vertical;
 }
 
 .contact-form .success-message,
@@ -887,6 +887,32 @@ p {
 .contact-form .success-message p,
 .contact-form .error-message p {
   font-size: 1.2rem;
+}
+
+.contact-form .success-message {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.contact-form .success-message h2 {
+  color: #00a8cc;
+  margin-bottom: 1rem;
+}
+
+.contact-form .error-message {
+  color: #ff6464;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+  background-color: #fff0f0;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ff6464;
+}
+
+.hero__button:disabled {
+  background-color: #9fb3c8;
+  cursor: not-allowed;
 }
 /* END CONTACT PAGE */
 
