@@ -19,3 +19,16 @@ document.addEventListener("click", (event) => {
     burger.classList.remove("active");
   }
 });
+
+// Contact form reset on page reload
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      contactForm.reset();
+    }
+  });
+
+  contactForm.reset();
+}
