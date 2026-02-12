@@ -24,11 +24,48 @@ document.addEventListener("click", (event) => {
 const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {
-  window.addEventListener("pageshow", (event) => {
-    if (event.persisted) {
-      contactForm.reset();
-    }
-  });
+  contactForm.addEventListener("submit", function (event) {
+    // 1. Stop the default form submission behavior
+    event.preventDefault();
 
-  contactForm.reset();
+    // 2. Collect form data
+    const data = new FormData(contactForm);
+
+    // 3. Send the form data using Fetch API
+    fetch(contactForm.action, {
+      method: contactForm.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          // 4. Show success message and reset form
+          contactForm.innerHTML = `
+          <div class="success-message">
+            <h2>Дякуємо!</h2>
+            <p>Ми отримали ваше повідомлення.</p>
+          </div>
+        `;
+        } else {
+          // 5. Show error message
+          contactForm.innerHTML = `
+          <div class="error-message">
+            <h2>Помилка!</h2>
+            <p>Виникла помилка при відправці повідомлення.</p>
+          </div>
+        `;
+        }
+      })
+      .catch((error) => {
+        // 6. Show error message on network failure
+        contactForm.innerHTML = `
+        <div class="error-message">
+          <h2>Помилка!</h2>
+          <p>Виникла помилка при відправці повідомлення.</p>
+        </div>
+      `;
+      });
+  });
 }
